@@ -1,0 +1,164 @@
+<!-- По оканчанию работы удалить обозначающий цветовой style у div -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script type="text/javascript" src="../js/scripts.js"></script>
+
+<body>
+    <header>Test</header>
+    <div class="display_grid">
+            <div class="dostavka">
+                <!-- На будушее, если выбрана доставка - то нужно указать адрес, иначе показать адрес склада -->
+                <p class="display_inline_block"><input type="radio" name="transportation" value="pickup">Самовывоз</p>
+                <p class="display_inline_block"><input type="radio" name="transportation" value="delivery">Доставка</p>
+            </div>
+            <div class="katalok_grid">
+                <!-- Реализовать кнопки  либо через табы(input type="radio") или через JS -->
+                <div class="hov_button ">Кухня</div>
+                <div class="hov_button ">Шкаф</div>
+                <div class="hov_button ">Кровать</div>
+                <div class="hov_button ">Прихожая</div>
+        </div>
+            <div class="block_2 table stolb1 ">
+                <table class="table_border_1">
+                    <tbody>
+                        <tr>
+                            <td>ДСП</td>
+                            <td>Цвет<select name="color">
+                                    <option value="white">белый</option>
+                                    <option value="red">красный</option>
+                                    <option value="green">зеленый</option>
+                                </select></td>
+                            <td>Толщина<select name="thickness_DCP">
+                                    <option value="16mm">16mm</option>
+                                    <option value="18mm">18mm</option>
+                                    <option value="19mm">19mm</option>
+                                </select></td>
+                            <td>Кол-во <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>МДФ</td>
+                            <td>Толщина<select name="thickness_MDF">
+                                    <option value="16mm">16mm</option>
+                                    <option value="18mm">18mm</option>
+                                    <option value="19mm">19mm</option>
+                                </select></td>
+                            <td>Качество<select name="quality_MDF">
+                                    <option value="good">16mm</option>
+                                    <option value="bad">18mm</option>
+                                </select></td>
+                            <td>Кол-во <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Столешница Дерево</td>
+                            <td>Цвет<select name="color_CT_D">
+                                    <option value="white">белый</option>
+                                    <option value="grey">серый</option>
+                                    <option value="black">черный</option>
+                                </select></td>
+                            <td>Толщина<select name="thickness_CT_D">
+                                    <option value="26mm">16mm</option>
+                                    <option value="38mm">18mm</option>
+                                    <option value="19mm">19mm</option>
+                                </select></td>
+                            <td>Кол-во <input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>Кромка</td>
+                            <td>Цвет<select name="color_KR">
+                                    <option value="white">белый</option>
+                                    <option value="red">красный</option>
+                                    <option value="green">зеленый</option>
+                                </select></td>
+                            <td>Толщина<select name="thickness_KR">
+                                    <option value="5mm">5mm</option>
+                                    <option value="8mm">8mm</option>
+                                    <option value="10mm">10mm</option>
+                                </select></td>
+                            <td>Кол-во <input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class=" table  stolb2">
+                <table class="table_border_1">
+                    <tbody>
+                        <tr>
+                            <td>Набор шурупов </td>
+                            <td>Длина<select name="length_screw">
+                                    <option value="16mm">16mm</option>
+                                    <option value="30mm">30mm</option>
+                                    <option value="40mm">40mm</option>
+                                </select></td>
+                            <td>Кол-во<select name="quantity_screw">
+                                    <option value="50">50шт</option>
+                                    <option value="100">100шт</option>
+                                    <option value="150">150шт</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Набор шурупов евро </td>
+                            <td>Длина<select name="length_screw_evro">
+                                    <option value="5x40">5x40</option>
+                                    <option value="5x50">5x50</option>
+                                    <option value="7">7x50</option>
+                                </select></td>
+                            <td>Кол-во<select name="quantity_screw_evro">
+                                    <option value="50">50шт</option>
+                                    <option value="100">100шт</option>
+                                    <option value="150">150шт</option>
+                                </select></td>
+                        </tr>
+                        <tr>
+                            <td>Ручки</td>
+                            <td>Тип<select name="cabinet_handle">
+                                    <option value="tip_1">Скоба</option>
+                                    <option value="tip_2">Кольцо</option>
+                                    <option value="tip_3">Рейлинг</option>
+                                </select></td>
+                            <td>Кол-во <input type="text"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        <!-- В кастомный заказ добавить кнопку которая должна добавлять строку выбора товара -->
+        <div class="stolb3">Кастомный заказ
+            <!-- Создать пример строки заказа -->
+            <div style="width: 500;">
+                Тут должна быть кнопка<br />
+                <b>Пример</b>
+                <table class="table_border_3">
+                    <tbody>
+                        <tr>
+                            <!-- Для каждого закаса должен быть свой запросы характеристик через select -->
+                            <!-- Что нужно? -->
+                            <td>
+                                ДСП
+                            </td>
+                            <!-- Цвет -->
+                            <td>
+                                Цвет белый
+                            </td>
+                            <!-- Толщина -->
+                            <td>
+                                Толщина 16мм
+                            </td>
+                            <!-- Через input -->
+                            <td>
+                                Кол-во
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>КД</footer>
+</body>
+
+</html>

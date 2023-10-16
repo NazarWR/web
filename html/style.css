@@ -1,0 +1,158 @@
+body ,h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+div{
+    width: auto;
+    height: auto;
+    background-color: aquamarine;
+}
+header{
+    width: 100%;
+    height: 500px;
+    background-color: cornflowerblue;
+}
+footer{
+    background-color: black; 
+    height: 160px;
+    color: white;
+    line-height: 160px;
+    text-align: center;
+    
+}
+.background_dark_green {
+    background-color: darkgreen;
+}
+.block_1{
+    width: auto;
+    height: auto;
+    background-color: blue;
+}
+p{
+    display: inline-block;
+}
+input{
+    width: 100px;
+}
+.hov_button{
+    width: auto;
+    height: auto;
+    margin:10px;
+}
+.hov_button:hover{
+    background-color: rgb(28, 28, 248)
+
+}
+.block_2{
+    background-color: aquamarine;
+}
+
+/* .block_3{
+    /* background-color: aquamarine;
+    width: 500px;
+    height: 200px; */
+
+
+/* .table{
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0; 
+    width: auto;
+    height: auto;
+}
+h */
+.table_border_1{
+    border: 10px solid black;
+}
+.table_border_3{
+    border: 1px solid black;
+}
+.display_grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto , auto));
+    grid-template-rows: repeat(2,  minmax(auto , auto));
+    grid-template-areas:
+    "dostavka katalok . "
+    " stolb1 stolb2 stolb3 ";
+    gap: 5px;
+    /* vertical-align: top;  */
+    justify-items: start;
+    align-items: start;
+    
+}
+.katalok_grid{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(1,auto);
+    /* grid-template-areas:
+    "kitchen wardrobe bed hallway" ; */
+
+}
+.dostavka{
+    grid-area: dostavka;
+}
+.katalok{
+    grid-area: katalok;
+}
+.stolb1{
+    grid-area: stolb1;
+}
+.stolb2{
+    grid-area: stolb2;
+    
+}
+.stolb3{
+    grid-area: stolb3;
+}
+
+@media screen and (max-width: 1025px) {
+    .display_grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto , auto));
+        grid-template-rows: repeat(3,  minmax(auto , auto));
+        grid-template-areas:
+        "dostavka katalok "
+        "stolb1 stolb2" 
+        "stolb3. ";
+        gap: 10px 10px;
+    }
+    .katalok_grid{
+        display: grid;
+        gap: 10px;
+        /* grid-template-areas:
+        "kitchen wardrobe bed hallway" ; */
+    }
+    .stolb3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: black;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .display_grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(auto , 100px));
+        grid-template-rows: repeat(4,  minmax(auto , auto));
+        grid-template-areas:
+        "dostavka katalok "
+        "stolb1 ." 
+        "stolb2 ."
+        "stolb3. ";
+        gap: 10px 10px;
+    }
+    .katalok_grid{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+        gap: 10px;
+        /* grid-template-areas:
+        "kitchen wardrobe bed hallway" ; */
+    }
+    .block_2{
+        width: auto;
+        height: auto;
+    }
+ }
