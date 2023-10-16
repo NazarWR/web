@@ -46,22 +46,6 @@ input{
     background-color: aquamarine;
 }
 
-/* .block_3{
-    /* background-color: aquamarine;
-    width: 500px;
-    height: 200px; */
-
-
-/* .table{
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0; 
-    width: auto;
-    height: auto;
-}
-h */
 .table_border_1{
     border: 10px solid black;
 }
